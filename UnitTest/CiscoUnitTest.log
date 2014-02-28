@@ -1,0 +1,130 @@
+Starting unit tests
+
+
+Transport URL Tests
+--------------------------------------
+Transport Test #1 - Typical
+--------------------------------------
+ciscosource://ec2-54-219-61-94.us-west-1.compute.amazonaws.com?camera=98620a82-327f-4094-8537-385b21eaee04&User=admin&Password=Admin123&Width=720&Height=480
+	PASS: Scheme
+	PASS: Domain
+	PASS: Server
+	PASS: Port
+	PASS: Camera
+	PASS: User
+	PASS: Password
+	PASS: Width
+	PASS: Height
+	PASS: Secure
+	PASS: Frame Rate
+	PASS: FrameQueueSize
+	PASS: Log Level
+	PASS: RTSP Address
+	PASS: Log Level
+--------------------------------------
+Transport Test #2 - Full
+--------------------------------------
+ciscosource://ec2-54-219-61-94.us-west-1.compute.amazonaws.com:443?camera=98620a82-327f-4094-8537-385b21eaee04&Domain=HorthSystems&User=David&Password=Horth&Width=720&Height=480&Secure=True&Framerate=30&Loglevel=5&FrameQueueSize=100
+	PASS: Scheme
+	PASS: Domain
+	PASS: Server
+	PASS: Port
+	PASS: Camera
+	PASS: User
+	PASS: Password
+	PASS: Width
+	PASS: Height
+	PASS: Secure
+	PASS: Frame Rate
+	PASS: FrameQueueSize
+	PASS: Log Level
+	PASS: RTSP Address
+	PASS: Log Level
+--------------------------------------
+Transport Test #3 - User supplied token
+--------------------------------------
+ciscosource://ec2-54-219-61-94.us-west-1.compute.amazonaws.com:?camera=98620a82-327f-4094-8537-385b21eaee04&Token=98620a82-327f-4094-8537-385b21eaee04^LVEAMO^50^0^0^1382283819^e57cd1b438d6dba6356b5b0952c21f2bf56c5d27&Width=720&Height=480
+	PASS: Scheme
+	PASS: Domain
+	PASS: Server
+	PASS: Port
+	PASS: Camera
+	PASS: User
+	PASS: Password
+	PASS: Width
+	PASS: Height
+	PASS: Secure
+	PASS: Frame Rate
+	PASS: FrameQueueSize
+	PASS: Log Level
+	PASS: RTSP Address
+	PASS: Log Level
+--------------------------------------
+Transport Test #4 - Direct Camera Access
+--------------------------------------
+ciscosource://10.0.0.22?SessionId=70762529&Width=1920&Height=1024
+	PASS: Scheme
+	PASS: Domain
+	PASS: Server
+	PASS: Port
+	PASS: Camera
+	PASS: User
+	PASS: Password
+	PASS: Width
+	PASS: Height
+	PASS: Secure
+	PASS: Frame Rate
+	PASS: FrameQueueSize
+	PASS: Log Level
+	PASS: RTSP Address Session ID
+	PASS: Log Level
+
+
+Media Queue Tests
+--------------------------------------
+Media Queue Test #1 - Positive
+--------------------------------------
+PASS: Queue size ok
+PASS: Queue count ok
+PASS: Queue isempty ok
+PASS: Queue count ok
+PASS: Queue isempty ok
+PASS: Queue count ok
+PASS: Queue isempty ok
+--------------------------------------
+Media Queue Test #1 - Negative
+--------------------------------------
+PASS: Queue size ok
+PASS:  Retrieving frame 11 is NULL
+PASS:  Get empty frame timing ok
+PASS: Queue count ok
+
+Log file test
+--------------------------------------
+LogFileTest #1 - Log file test
+--------------------------------------
+PASS: LogFileTest
+
+
+CiscoUsageEnvirnoment Test
+--------------------------------------
+CiscoUsageEnvironment Test #1 - write to trace helper
+--------------------------------------
+PASS: CiscoUsageEnvironment
+PASS: CiscoUsageEnvironment
+PASS: CiscoUsageEnvironment
+
+
+Video Decoder Tests
+--------------------------------------
+Video Decoder Test #1 - Positive
+--------------------------------------
+
+
+RTSP Tests
+--------------------------------------
+RTSP Test #1 - open stream
+--------------------------------------
+FAIL: Open Stream ret=-1
+PASS: Open Stream ret=-1
+Open failed bailing out of all RTSP tests
